@@ -1,4 +1,4 @@
-import 'package:accordion/future_provider_widget.dart';
+import 'package:accordion/riverpod_select_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(title: const Text('FutureBuilderの使い方')),
-        body: const FutureWidget(),
+        body: const RiverpodSelectWidget(),
       ),
     );
   }
