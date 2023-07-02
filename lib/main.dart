@@ -1,9 +1,8 @@
-import 'package:accordion/riverpod_select_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:fl_chart/fl_chart.dart';
 
 void main() {
-  runApp(ProviderScope(child: MyApp()));
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -11,8 +10,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: const Text('FutureBuilderの使い方')),
-        body: const RiverpodSelectWidget(),
+        appBar: AppBar(
+          title: Text('Line Chart'),
+        ),
+        body: LineChartWidget(),
       ),
     );
   }
