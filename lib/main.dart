@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:fl_chart/fl_chart.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-void main() {
+void main() async {
+  // 入力
+  const envFile = String.fromEnvironment('env');
+  await dotenv.load(fileName: envFile);
+
   runApp(MyApp());
 }
 
@@ -11,9 +15,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Line Chart'),
+          title: Text(''),
         ),
-        body: LineChartWidget(),
+        body: Scaffold(),
       ),
     );
   }
