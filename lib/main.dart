@@ -17,7 +17,19 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text(''),
         ),
-        body: Scaffold(),
+        body: Scaffold(
+          body: InkWell(
+            onTap: () async {
+              await Future.delayed(const Duration(seconds: 2));
+              if (context.mounted) Navigator.pop(context);
+            },
+            child: Container(
+              width: 100,
+              height: 100,
+              color: Colors.red,
+            ),
+          ),
+        ),
       ),
     );
   }
